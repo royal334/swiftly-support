@@ -46,7 +46,7 @@ export const Navbar = () => {
         <a href="#" className="flex items-center space-x-2">
           <img src="/image.png" alt="" className="w-10 h-10 rounded-xl" />
           <span className="text-2xl font-bold font-display tracking-tight">
-            Swiftly
+            Swiftly Support
           </span>
         </a>
 

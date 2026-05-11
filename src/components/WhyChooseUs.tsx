@@ -46,9 +46,9 @@ export const WhyChooseUs = () => {
   return (
     <Section id="why-us" className="py-24">
       <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-        <h2 className="text-4xl md:text-5xl font-bold">Why Swiftly?</h2>
+        <h2 className="text-4xl md:text-5xl font-bold">Why Swiftly Support?</h2>
         <p className="text-muted-foreground text-lg text-balance">
-          We've redesigned the staffing experience to be faster, smarter, and
+          We've redesigned the Executive Assistant experience to be faster, smarter, and
           more reliable.
         </p>
       </div>

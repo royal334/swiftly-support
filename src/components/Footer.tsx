@@ -10,7 +10,7 @@ export const Footer = () => {
             <a href="#" className="flex items-center space-x-2">
               <img src="/image.png" alt=""  className="w-10 h-10 rounded-xl" />
               <span className="text-2xl font-bold font-display tracking-tight">
-                Swiftly
+                Swiftly Support
               </span>
             </a>
             <p className="text-muted-foreground text-lg max-w-sm">
@@ -110,7 +110,7 @@ export const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 text-sm text-muted-foreground font-medium">
-          <p>© 2026 Swiftly Staffing Agency. All rights reserved.</p>
+          <p>© 2026 Swiftly Support Agency. All rights reserved.</p>
           <div className="flex items-center space-x-6">
             <a href="#" className="hover:text-brand-primary transition-colors">
               Cookies
