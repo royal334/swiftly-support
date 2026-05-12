@@ -1,8 +1,4 @@
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
-import { Button } from "./Button";
-import { Section } from "./Section";
-import { Card } from "./Card";
 
 export const Hero = () => {
   return (
@@ -32,7 +28,7 @@ export const Hero = () => {
 
           <h1 className="font-display text-[48px] md:text-[82px] font-black leading-[1.05] text-white mb-7 tracking-tight">
             Elevating Business <br />
-            <em className="italic not-italic bg-gradient-to-r from-amber via-amber-light to-amber bg-[length:200%_auto] bg-clip-text text-transparent animate-shimmer">
+            <em className="italic not-odd:bg-gradient-to-r from-amber via-amber-light to-amber bg-[length:200%_auto] bg-clip-text text-transparent animate-shimmer">
               Expectations
             </em>
           </h1>

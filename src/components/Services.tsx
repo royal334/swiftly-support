@@ -1,14 +1,4 @@
-import { Section } from "./Section";
-import { Card, CardHeader, CardContent } from "./Card";
 import { motion } from "framer-motion";
-import {
-  UserRound,
-  Briefcase,
-  Headphones,
-  Calendar,
-  ClipboardCheck,
-  Clock,
-} from "lucide-react";
 
 export const Services = () => {
   const services = [
@@ -84,7 +74,7 @@ export const Services = () => {
                 {service.icon}
               </div>
 
-              <h3 className="font-display text-xl font-bold text-midnight mb-3.5 italic not-italic transition-colors">
+              <h3 className="font-display text-xl font-bold text-midnight mb-3.5 italic transition-colors">
                 {service.title}
               </h3>
 

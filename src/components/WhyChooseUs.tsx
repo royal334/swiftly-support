@@ -73,9 +73,9 @@ export const WhyChooseUs = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="bg-white/[0.04] border border-amber/15 p-10 rounded-2xl"
+            className="bg-white/4 border border-amber/15 p-10 rounded-2xl"
           >
-            <h3 className="font-display text-[22px] text-amber mb-4 font-bold italic not-italic">
+            <h3 className="font-display text-[22px] text-amber mb-4 font-bold italic">
               Hybrid Delivery Model
             </h3>
             <p className="text-white/60 text-sm leading-[1.7] mb-5">
@@ -98,7 +98,7 @@ export const WhyChooseUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-white/[0.04] border border-amber/15 p-10 rounded-2xl"
+            className="bg-white/4 border border-amber/15 p-10 rounded-2xl"
           >
             <h3 className="font-display text-[22px] text-amber mb-4 font-bold">
               Vetted & Trained Professionals
@@ -115,7 +115,7 @@ export const WhyChooseUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="bg-white/[0.04] border border-amber/15 p-10 rounded-2xl"
+            className="bg-white/4 border border-amber/15 p-10 rounded-2xl"
           >
             <h3 className="font-display text-[22px] text-amber mb-4 font-bold">
               Data Protection First

@@ -2,7 +2,6 @@ import * as React from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "../lib/utils";
-import { Button } from "./Button";
 import { ThemeToggle } from "./ThemeToggle";
 
 export const Navbar = () => {
@@ -35,7 +34,7 @@ export const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-[100] transition-all duration-300 px-6 py-4 md:px-[60px] md:py-[18px]",
+        "fixed top-0 left-0 right-0 z-100 transition-all duration-300 px-6 py-4 md:px-[60px] md:py-[18px]",
         "bg-midnight/95 backdrop-blur-xl border-b border-amber/20",
         scrolled ? "shadow-lg shadow-black/20" : "",
       )}
@@ -113,7 +112,7 @@ export const Navbar = () => {
 
       {/* Scroll Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-[2px] bg-amber origin-left z-[110]"
+        className="fixed top-0 left-0 right-0 h-[2px] bg-amber origin-left z-110"
         style={{ scaleX }}
       />
     </nav>
