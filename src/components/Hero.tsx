@@ -6,163 +6,130 @@ import { Card } from "./Card";
 
 export const Hero = () => {
   return (
-    <Section className="pt-32 pb-20 md:pt-48 md:pb-32 min-height-[90vh] flex items-center relative overflow-hidden">
-      {/* Structural Background Pattern */}
-      <div className="absolute inset-0 -z-10 bg-linear-to-b from-brand-primary/5 to-transparent" />
-      <div className="absolute right-0 top-0 w-1/2 h-full bg-linear-to-l from-brand-primary/5 to-transparent -z-10" />
+    <section className="hero relative min-h-screen bg-midnight flex items-center pt-[120px] pb-20 px-6 md:px-[60px] overflow-hidden">
+      {/* Hero Background Effects */}
+      <div className="hero-bg absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_70%_50%,rgba(26,58,107,0.8)_0%,transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_30%_30%_at_20%_80%,rgba(245,166,35,0.08)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_20%_40%_at_85%_20%,rgba(245,166,35,0.06)_0%,transparent_60%)]" />
+      </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        {/* Text Content */}
-        <div className="lg:col-span-7 text-left space-y-8">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center space-x-2 px-3 py-1 rounded-lg bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-sm font-semibold"
-          >
-            <span>Trusted Operational Support</span>
-          </motion.div>
+      {/* Grid Overlay */}
+      <div className="hero-grid absolute inset-0 opacity-[0.04] pointer-events-none bg-[linear-gradient(rgba(245,166,35,0.5)_1px,transparent_1px),linear-gradient(90deg,rgba(245,166,35,0.5)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight text-foreground"
-          >
-            Professional Support <br />
-            For <span className="text-brand-primary">Scaling Enterprises</span>
-          </motion.h1>
+      <div className="max-w-[1440px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+        {/* Hero Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="max-w-[680px]"
+        >
+          <div className="hero-tag inline-flex items-center gap-2 bg-amber/10 border border-amber/30 text-amber px-[18px] py-2 rounded-full text-xs font-bold tracking-[1.5px] uppercase mb-8">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber animate-pulse" />
+            Precision Executive Support
+          </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl text-muted-foreground max-w-2xl leading-relaxed"
-          >
-            Maximize your productivity with top-tier executive assistants. We
-            match your business with highly vetted specialists to streamline
-            your operations and drive growth.
-          </motion.p>
+          <h1 className="font-display text-[48px] md:text-[82px] font-black leading-[1.05] text-white mb-7 tracking-tight">
+            Elevating Business <br />
+            <em className="italic not-italic bg-gradient-to-r from-amber via-amber-light to-amber bg-[length:200%_auto] bg-clip-text text-transparent animate-shimmer">
+              Expectations
+            </em>
+          </h1>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4"
-          >
-            <Button size="lg" className="w-full sm:w-auto px-10 h-14 text-lg">
-              Partner With Us
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="w-full sm:w-auto px-10 h-14 text-lg"
+          <p className="text-[18px] leading-[1.7] text-white/65 mb-12 max-w-[520px]">
+            Swiftly Support provides highly vetted, Nigerian-based business
+            professionals for global enterprises. Operational excellence,
+            delivered with precision.
+          </p>
+
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="#contact"
+              className="bg-amber hover:bg-amber-light text-midnight px-9 py-4 rounded-[4px] font-bold text-[15px] flex items-center gap-2 transition-all hover:shadow-[0_12px_30px_rgba(245,166,35,0.3)] hover:-translate-y-0.5"
             >
-              Book a Strategy Call
-            </Button>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex flex-wrap gap-x-8 gap-y-4 pt-4"
-          >
-            {["Vetted Top 1%", "Corporate Standards", "Scalable Teams"].map(
-              (item) => (
-                <div
-                  key={item}
-                  className="flex items-center space-x-2 text-sm font-medium text-muted-foreground"
-                >
-                  <CheckCircle2 className="w-4 h-4 text-brand-primary" />
-                  <span>{item}</span>
-                </div>
-              ),
-            )}
-          </motion.div>
-        </div>
-
-        {/* Visual Mockup */}
-        <div className="lg:col-span-5 relative hidden lg:block">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative z-20"
-          >
-            {/* Main Corporate Card */}
-            <Card className="relative z-20 overflow-hidden border-border shadow-xl bg-white dark:bg-slate-900 rounded-2xl">
-              <div className="flex items-center justify-between mb-8">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center font-bold text-brand-primary">
-                    SS
-                  </div>
-                  <div>
-                    <div className="font-bold text-foreground">
-                      Operational Lead
-                    </div>
-                    <div className="text-xs text-muted-foreground">
-                      Assigned to your account
-                    </div>
-                  </div>
-                </div>
-                <div className="px-3 py-1 rounded-md bg-brand-primary/10 text-brand-primary text-[10px] font-bold uppercase tracking-wider">
-                  Verified
-                </div>
-              </div>
-              <div className="space-y-6">
-                {[
-                  { label: "Onboarding Progress", value: "100%", percent: 100 },
-                  {
-                    label: "System Integration",
-                    value: "Active",
-                    percent: 95,
-                  },
-                  { label: "Efficiency Gain", value: "40%", percent: 85 },
-                ].map((stat) => (
-                  <div key={stat.label} className="space-y-2">
-                    <div className="flex justify-between text-xs font-medium">
-                      <span className="text-muted-foreground">
-                        {stat.label}
-                      </span>
-                      <span className="text-foreground">{stat.value}</span>
-                    </div>
-                    <div className="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        animate={{ width: `${stat.percent}%` }}
-                        transition={{ duration: 1, delay: 1 }}
-                        className="h-full bg-brand-primary"
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </Card>
-
-            {/* Floating Info Tag */}
-            <motion.div
-              animate={{ y: [0, -5, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-6 -right-6 z-30"
+              DEPLOY STAFF <span className="text-xl">→</span>
+            </a>
+            <a
+              href="#services"
+              className="bg-transparent text-white border border-white/30 hover:border-amber hover:text-amber px-9 py-4 rounded-[4px] font-bold text-[15px] transition-all"
             >
-              <div className="bg-white dark:bg-slate-800 border border-border p-4 py-3 rounded-xl shadow-lg flex items-center space-x-3">
-                <div className="p-2 rounded-lg bg-green-500/10">
-                  <CheckCircle2 className="w-5 h-5 text-green-600" />
-                </div>
-                <div>
-                  <div className="text-xs font-bold text-foreground">
-                    Match Ready
-                  </div>
-                  <div className="text-[10px] text-muted-foreground">
-                    Vetted Specialist
-                  </div>
-                </div>
+              VIEW SERVICES
+            </a>
+          </div>
+        </motion.div>
+
+        {/* Hero Decor/Visual */}
+        <div className="relative hidden lg:flex justify-center items-center h-[500px]">
+          <motion.div
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="w-[380px] h-[380px] border border-amber/15 rounded-full flex items-center justify-center relative"
+          >
+            <div className="w-[300px] h-[300px] border border-amber/10 rounded-full flex items-center justify-center relative">
+              <div className="w-[220px] h-[220px] border border-amber/5 rounded-full bg-midnight-light/30 backdrop-blur-sm shadow-2xl flex items-center justify-center overflow-hidden">
+                <img
+                  src="/image.png"
+                  alt="Operational Excellence"
+                  className="w-[85%] h-[85%] object-cover rounded-full opacity-90"
+                />
               </div>
-            </motion.div>
+            </div>
+
+            {/* Pulsing badges */}
+            <div className="absolute top-[20%] right-[-20px] bg-midnight-mid border border-amber/20 px-4 py-3 rounded-lg shadow-2xl">
+              <div className="text-amber font-bold text-lg leading-none">
+                100%
+              </div>
+              <div className="text-white/50 text-[10px] uppercase tracking-wider mt-1">
+                Reliability
+              </div>
+            </div>
+
+            <div className="absolute bottom-[20%] left-[-40px] bg-midnight-mid border border-amber/20 px-4 py-3 rounded-lg shadow-2xl">
+              <div className="text-amber font-bold text-lg leading-none">
+                Vetted
+              </div>
+              <div className="text-white/50 text-[10px] uppercase tracking-wider mt-1">
+                Professionalism
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
-    </Section>
+
+      {/* Hero Stats */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 1 }}
+        className="absolute md:right-[60px] md:bottom-20 bottom-10 left-6 md:left-auto flex gap-12 z-20"
+      >
+        <div className="stat">
+          <div className="font-display text-[42px] font-black text-amber leading-none">
+            24/7
+          </div>
+          <div className="text-white/50 text-[11px] uppercase tracking-[1px] mt-1.5">
+            Availability
+          </div>
+        </div>
+        <div className="stat">
+          <div className="font-display text-[42px] font-black text-amber leading-none">
+            100+
+          </div>
+          <div className="text-white/50 text-[11px] uppercase tracking-[1px] mt-1.5">
+            Deployments
+          </div>
+        </div>
+        <div className="stat">
+          <div className="font-display text-[42px] font-black text-amber leading-none">
+            98%
+          </div>
+          <div className="text-white/50 text-[11px] uppercase tracking-[1px] mt-1.5">
+            Success Rate
+          </div>
+        </div>
+      </motion.div>
+    </section>
   );
 };

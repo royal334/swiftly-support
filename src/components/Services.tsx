@@ -13,80 +13,99 @@ import {
 export const Services = () => {
   const services = [
     {
-      title: "Virtual Assistant",
-      desc: "Comprehensive support for day-to-day tasks, research, and general management.",
-      icon: <UserRound className="w-6 h-6" />,
-      color: "blue",
+      title: "Internal Support",
+      desc: "Dedicated onsite professionals for your physical office operations, documentation, and local logistics.",
+      icon: "🏢",
+      tags: ["Onsite Placement"],
     },
     {
-      title: "Executive Assistant",
-      desc: "High-level strategic support for founders, CEOs, and busy executives.",
-      icon: <Briefcase className="w-6 h-6" />,
-      color: "purple",
+      title: "Operational Support",
+      desc: "Expert remote assistance for business process management, scheduling, and project coordination.",
+      icon: "⚙️",
+      tags: ["Remote Support"],
     },
     {
-      title: "Customer Support",
-      desc: "Dedicated professionals to handle your customer inquiries and tickets.",
-      icon: <Headphones className="w-6 h-6" />,
-      color: "rose",
+      title: "Technical Delegation",
+      desc: "Specialized support for CRM management, technical documentation, and basic data oversight.",
+      icon: "💻",
+      tags: ["Remote Support"],
     },
     {
-      title: "Calendar & Email",
-      desc: "Expert inbox management and scheduling to keep your life organized.",
-      icon: <Calendar className="w-6 h-6" />,
-      color: "blue",
+      title: "Strategic Executive Support",
+      desc: "High-level administrative partnership for CEOs and founders, managing sensitive communications.",
+      icon: "🤝",
+      tags: ["Onsite", "Remote"],
     },
     {
-      title: "Administrative Ops",
-      desc: "Streamlining your internal operations and documentation processes.",
-      icon: <ClipboardCheck className="w-6 h-6" />,
-      color: "purple",
+      title: "Growth & CRM Management",
+      desc: "Driving business stability by managing lead pipelines and maintaining client data integrity.",
+      icon: "📈",
+      tags: ["Remote Support"],
     },
     {
-      title: "Time Management",
-      desc: "Helping you reclaim your time by automating repetitive workflows.",
-      icon: <Clock className="w-6 h-6" />,
-      color: "rose",
+      title: "Communications",
+      desc: "Handling high-volume front-facing communications, including email, chat, and voice support.",
+      icon: "📞",
+      tags: ["Remote Support"],
     },
   ];
 
   return (
-    <Section id="services">
-      <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-        <h2 className="text-4xl md:text-5xl font-bold">Premium Services</h2>
-        <p className="text-muted-foreground text-lg">
+    <section
+      className="services py-24 px-6 md:px-[60px] bg-offwhite"
+      id="services"
+    >
+      <div className="max-w-[1440px] mx-auto">
+        <div className="section-tag text-[11px] font-bold tracking-[3px] uppercase text-amber mb-4 flex items-center gap-3 after:content-[''] after:h-px after:w-10 after:bg-amber">
+          Precision Offerings
+        </div>
+        <h2 className="font-display text-[42px] md:text-[52px] font-black leading-tight text-midnight mb-4">
+          Corporate Support Services
+        </h2>
+        <p className="text-[17px] text-text-muted leading-relaxed max-w-[560px] mb-16">
           We provide specialized talent tailored to your business needs,
           ensuring every task is handled with precision.
         </p>
-      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {services.map((service) => (
-          <motion.div
-            key={service.title}
-            whileHover={{ y: -5 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <Card className="h-full group hover:border-brand-primary transition-all p-8 rounded-xl bg-white dark:bg-slate-900 shadow-sm hover:shadow-lg">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-xl bg-brand-primary/5 border border-brand-primary/10 flex items-center justify-center mb-6 group-hover:bg-brand-primary group-hover:text-white transition-all text-brand-primary">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-bold group-hover:text-brand-primary transition-colors">
-                  {service.title}
-                </h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  {service.desc}
-                </p>
-              </CardContent>
-              {/* Subtler Hover Effect */}
-              <div className="absolute inset-0 bg-brand-primary/2 opacity-0 group-hover:opacity-100 transition-opacity rounded-xl -z-10" />
-            </Card>
-          </motion.div>
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-white p-8 md:p-9 border border-transparent hover:border-amber/20 hover:shadow-2xl transition-all relative group overflow-hidden rounded-xl"
+            >
+              {/* Bottom Border Effect */}
+              <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-amber transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
+
+              <div className="w-14 h-14 bg-amber-pale group-hover:bg-amber flex items-center justify-center text-2xl mb-8 rounded-xl transition-all duration-300 group-hover:scale-105">
+                {service.icon}
+              </div>
+
+              <h3 className="font-display text-xl font-bold text-midnight mb-3.5 italic not-italic transition-colors">
+                {service.title}
+              </h3>
+
+              <p className="text-sm text-text-muted leading-relaxed mb-6">
+                {service.desc}
+              </p>
+
+              <div className="flex flex-wrap gap-2">
+                {service.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-[11px] font-bold tracking-tight px-3 py-1 bg-amber/10 text-amber rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </Section>
+    </section>
   );
 };
