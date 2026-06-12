@@ -64,11 +64,6 @@ export const Hero = () => {
           >
             <div className="w-[300px] h-[300px] border border-amber/10 rounded-full flex items-center justify-center relative">
               <div className="w-[220px] h-[220px] border border-amber/5 rounded-full bg-midnight-light/30 backdrop-blur-sm shadow-2xl flex items-center justify-center overflow-hidden">
-                <img
-                  src="/image.png"
-                  alt="Operational Excellence"
-                  className="w-[85%] h-[85%] object-cover rounded-full opacity-90"
-                />
               </div>
             </div>
 
