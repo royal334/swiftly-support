@@ -11,7 +11,7 @@ export const Hero = () => {
       </div>
 
       {/* Grid Overlay */}
-      <div className="hero-grid absolute inset-0 opacity-[0.04] pointer-events-none bg-[linear-gradient(rgba(245,166,35,0.5)_1px,transparent_1px),linear-gradient(90deg,rgba(245,166,35,0.5)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      <div className="hero-grid absolute inset-0 opacity-[0.04] pointer-events-none bg-[linear-gradient(rgba(245,166,35,0.5)_1px,transparent_1px),linear-gradient(90deg,rgba(245,166,35,0.5)_1px,transparent_1px)] bg-size-[60px_60px]" />
 
       <div className="max-w-[1440px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Hero Content */}
@@ -28,7 +28,7 @@ export const Hero = () => {
 
           <h1 className="font-display text-[48px] md:text-[82px] font-black leading-[1.05] text-white mb-7 tracking-tight">
             Elevating Business <br />
-            <em className="italic not-odd:bg-gradient-to-r from-amber via-amber-light to-amber bg-[length:200%_auto] bg-clip-text text-transparent animate-shimmer">
+            <em className="italic not-odd:bg-linear-to-r from-amber via-amber-light to-amber bg-size-[200%_auto] bg-clip-text text-transparent animate-shimmer">
               Expectations
             </em>
           </h1>

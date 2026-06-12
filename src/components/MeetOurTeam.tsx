@@ -63,7 +63,7 @@ export const MeetOurTeam = () => {
                 </div>
               )}
 
-              <div className="team-img-wrap mb-8 relative aspect-square rounded-xl overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500 border border-white/10 group-hover:border-amber/20">
+              <div className="team-img-wrap mb-8 relative aspect-square rounded-xl overflow-hidden md:grayscale group-hover:grayscale-0 transition-all duration-500 border border-white/10 group-hover:border-amber/20">
                 <img
                   src={member.image}
                   alt={member.name}
