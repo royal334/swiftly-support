@@ -58,12 +58,12 @@ export const MeetOurTeam = () => {
             >
               {/* Founder Badge */}
               {member.isFounder && (
-                <div className="absolute top-4 right-4 bg-amber text-midnight text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                <div className="absolute top-4 right-4 bg-amber text-midnight text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider z-10">
                   Founder
                 </div>
               )}
 
-              <div className="team-img-wrap mb-8 relative aspect-square rounded-xl overflow-hidden md:grayscale group-hover:grayscale-0 transition-all duration-500 border border-white/10 group-hover:border-amber/20">
+              <div className="team-img-wrap mb-8 relative aspect-square rounded-xl overflow-hidden transition-all duration-500 border border-white/10 group-hover:border-amber/20">
                 <img
                   src={member.image}
                   alt={member.name}
